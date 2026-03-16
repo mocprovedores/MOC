@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Área do Cliente | MOC Provedores</title>
+  <link rel="icon" href="img/logo.svg" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .login-section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 24px 40px;
+      position: relative;
+      background: var(--bg);
+    }
+    .login-container {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: var(--radius-xl);
+      padding: 48px;
+      width: 100%;
+      max-width: 440px;
+      box-shadow: 0 24px 48px rgba(0,0,0,.4);
+      backdrop-filter: blur(20px);
+      position: relative;
+      z-index: 2;
+    }
+    .login-header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .login-logo {
+      height: 80px;
+      width: auto;
+      max-width: 100%;
+      margin: 0 auto 32px;
+      display: block;
+      object-fit: contain;
+    }
+    .login-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    .login-subtitle {
+      font-size: .95rem;
+      color: var(--grey-2);
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 28px;
+      font-size: .85rem;
+    }
+    .form-options label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--grey-2);
+      cursor: pointer;
+    }
+    .form-options a {
+      color: var(--neon);
+      transition: color var(--transition);
+    }
+    .form-options a:hover {
+      text-decoration: underline;
+    }
+    .login-btn {
+      width: 100%;
+      justify-content: center;
+      padding: 14px;
+      font-size: 1.05rem;
+    }
+    .login-footer {
+      text-align: center;
+      margin-top: 32px;
+      font-size: .9rem;
+      color: var(--grey-2);
+    }
+    .login-footer a {
+      color: var(--white);
+      font-weight: 600;
+      transition: color var(--transition);
+    }
+    .login-footer a:hover {
+      color: var(--neon);
+    }
+    .back-btn {
+      position: absolute;
+      top: 32px;
+      left: 32px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--grey-2);
+      font-size: .95rem;
+      font-weight: 500;
+      transition: color var(--transition);
+      z-index: 10;
+    }
+    .back-btn:hover {
+      color: var(--neon);
+    }
+    .back-btn i {
+      font-size: 1.2rem;
+    }
+    
+    @media (max-width: 480px) {
+      .login-container { padding: 40px 24px; }
+      .back-btn { top: 20px; left: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="index.html" class="back-btn"><i class="ph-bold ph-arrow-left"></i> Voltar ao site</a>
+
+  <section class="login-section">
+    <!-- Fundo animado reaproveitado da home -->
+    <canvas id="networkCanvas" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.6; z-index: 0;"></canvas>
+    <div class="hero__glow" aria-hidden="true" style="top: 50%; transform: translate(-50%, -50%); z-index: 1;"></div>
+
+    <div class="login-container">
+      <div class="login-header">
+        <!-- Logo -->
+        <a href="index.html">
+          <img src="img/logo.svg" alt="MOC Provedores" class="login-logo" onerror="this.onerror=null; this.src=''; this.alt='MOC Provedores';">
+        </a>
+        <h1 class="login-title">Área do Cliente</h1>
+        <p class="login-subtitle">Acesso exclusivo para emissão de boletos e suporte.</p>
+      </div>
+
+      <form action="#" method="POST" id="loginForm">
+        <div class="form-group">
+          <label for="cpf_cnpj">CPF ou CNPJ</label>
+          <input type="text" id="cpf_cnpj" name="cpf_cnpj" placeholder="Digite apenas números" required />
+        </div>
+        <div class="form-group">
+          <label for="senha">Senha</label>
+          <input type="password" id="senha" name="senha" placeholder="Sua senha de acesso" required />
+        </div>
+        
+        <div class="form-options">
+          <label><input type="checkbox" name="lembrar" /> Lembrar-me</label>
+          <a href="#">Esqueci minha senha</a>
+        </div>
+
+        <button type="button" class="btn btn--neon login-btn" onclick="alert('Funcionalidade em desenvolvimento. Redirecionando para WhatsApp...'); window.open('https://wa.me/5583981638677?text=Olá,%20preciso%20de%20ajuda%20com%20minha%20Área%20do%20Cliente!', '_blank');">
+          Entrar <i class="ph-bold ph-sign-in"></i>
+        </button>
+      </form>
+
+      <div class="login-footer">
+        Ainda não é cliente? <br/><a href="index.html#planos">Conheça nossos planos</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

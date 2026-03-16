@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOC - MOC Provedores | Monitoramento</title>
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml" />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  
+  <!-- Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
+  
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/noc.css" />
+</head>
+<body class="noc-theme">
+
+  <!-- Sidebar Lateral -->
+  <nav class="sidebar">
+    <div class="sidebar__logo">
+      <img src="img/logo.svg" alt="MOC Loo" />
+      <span>NOC CENTER</span>
+    </div>
+    
+    <div class="sidebar__nav">
+      <a href="noc.html"><i class="ph-bold ph-squares-four"></i> Visão Geral</a>
+      <a href="noc_mapa.html"><i class="ph-bold ph-map-pin"></i> Mapa da Rede</a>
+      <a href="noc_equipamentos.html"><i class="ph-bold ph-router"></i> Equipamentos</a>
+      <a href="noc_trafego.html"><i class="ph-bold ph-chart-line-up"></i> Tráfego</a>
+      <a href="noc_clientes.html"><i class="ph-bold ph-users"></i> Clientes</a>
+    </div>
+
+    <!-- 10. Painel de Controle Rápido -->
+    <div class="sidebar__actions">
+      <p class="sidebar__title">AÇÕES RÁPIDAS</p>
+      <a href="noc_reiniciar.html" class="btn-action"><i class="ph ph-arrow-counter-clockwise"></i> Reiniciar Equip.</a>
+      <a href="noc_testar.html" class="btn-action"><i class="ph ph-activity"></i> Testar Conexão</a>
+      <a href="noc_logs.html" class="btn-action"><i class="ph ph-file-text"></i> Ver Logs</a>
+      <a href="noc_ticket.html" class="active" class="btn-action btn-danger"><i class="ph ph-ticket"></i> Abrir Ticket</a>
+    </div>
+
+    <div class="sidebar__footer">
+      <div class="sys-status">
+        <span class="pulse-dot green"></span> Sistema Online
+      </div>
+      <div class="clock" id="noc-clock">13:00:00</div>
+    </div>
+  </nav>
+
+  <!-- Área Principal -->
+  <main class="dashboard">
+    <!-- Header -->
+    <header class="topbar">
+      <div class="page-title">
+        <h1 id="current-section-title">Abertura de Ticket NOC</h1>
+        <p id="current-section-subtitle">Criação ágil de incidentes graves para equipe N3</p>
+      </div>
+      
+      <!-- 7. Status dos Links In/Out -->
+      <div class="links-status">
+        <div class="link-card status-online">
+          <i class="ph-fill ph-check-circle"></i>
+          <div>
+            <span>LINK PRINCIPAL (FIBRA)</span>
+            <strong>ONLINE - 2ms</strong>
+          </div>
+        </div>
+        <div class="link-card status-alert">
+          <i class="ph-fill ph-warning-circle"></i>
+          <div>
+            <span>LINK BACKUP (RÁDIO)</span>
+            <strong>INSTÁVEL - 45ms</strong>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    
+        <!-- SEÇÃO: AÇÃO RÁPIDA -->
+        <div class="dashboard-section active" style="display:flex; justify-content:center; align-items:center; min-height:600px;">
+          <div class="panel full-panel" style="display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; border-color: rgba(0, 212, 255, 0.3); background: rgba(0,0,0,0.5);">
+            <i class="ph-bold ph-ticket" style="font-size: 5rem; color: var(--neon); margin-bottom: 24px; animation: pulse 2s infinite;"></i>
+            <h2>Módulo em Desenvolvimento (Integração de Back-end Pendente)</h2>
+            <p style="color: var(--grey); margin-top: 16px; margin-bottom: 32px; max-width: 500px; font-size: 1.1rem; line-height: 1.6;">Esta ferramenta de diagnóstico remoto está sendo conectada de forma segura na API da rede (Zabbix/UNMS). Aguarde a próxima versão de release.</p>
+            <a href="noc.html" class="btn-action" style="width: auto; padding: 12px 24px; font-size: 1rem; border-color: var(--neon);"><i class="ph ph-arrow-left"></i> Retornar ao NOC</a>
+          </div>
+        </div>
+        
+  </main>
+
+  <script src="js/noc.js"></script>
+</body>
+</html>

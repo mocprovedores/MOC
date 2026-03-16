@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOC - MOC Provedores | Monitoramento</title>
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml" />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  
+  <!-- Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
+  
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/noc.css" />
+</head>
+<body class="noc-theme">
+
+  <!-- Sidebar Lateral -->
+  <nav class="sidebar">
+    <div class="sidebar__logo">
+      <img src="img/logo.svg" alt="MOC Loo" />
+      <span>NOC CENTER</span>
+    </div>
+    
+    <div class="sidebar__nav">
+      <a href="noc.html" class="active"><i class="ph-bold ph-squares-four"></i> Visão Geral</a>
+      <a href="noc_mapa.html"><i class="ph-bold ph-map-pin"></i> Mapa da Rede</a>
+      <a href="noc_equipamentos.html"><i class="ph-bold ph-router"></i> Equipamentos</a>
+      <a href="noc_trafego.html"><i class="ph-bold ph-chart-line-up"></i> Tráfego</a>
+      <a href="noc_clientes.html"><i class="ph-bold ph-users"></i> Clientes</a>
+    </div>
+
+    <!-- 10. Painel de Controle Rápido -->
+    <div class="sidebar__actions">
+      <p class="sidebar__title">AÇÕES RÁPIDAS</p>
+      <a href="noc_reiniciar.html" class="btn-action"><i class="ph ph-arrow-counter-clockwise"></i> Reiniciar Equip.</a>
+      <a href="noc_testar.html" class="btn-action"><i class="ph ph-activity"></i> Testar Conexão</a>
+      <a href="noc_logs.html" class="btn-action"><i class="ph ph-file-text"></i> Ver Logs</a>
+      <a href="noc_ticket.html" class="btn-action btn-danger"><i class="ph ph-ticket"></i> Abrir Ticket</a>
+    </div>
+
+    <div class="sidebar__footer">
+      <div class="sys-status">
+        <span class="pulse-dot green"></span> Sistema Online
+      </div>
+      <div class="clock" id="noc-clock">13:00:00</div>
+    </div>
+  </nav>
+
+  <!-- Área Principal -->
+  <main class="dashboard">
+    <!-- Header -->
+    <header class="topbar">
+      <div class="page-title">
+        <h1 id="current-section-title">Centro de Monitoramento da Rede</h1>
+        <p id="current-section-subtitle">Visão holística da infraestrutura em tempo real</p>
+      </div>
+      
+      <!-- 7. Status dos Links In/Out -->
+      <div class="links-status">
+        <div class="link-card status-online">
+          <i class="ph-fill ph-check-circle"></i>
+          <div>
+            <span>LINK PRINCIPAL (FIBRA)</span>
+            <strong>ONLINE - 2ms</strong>
+          </div>
+        </div>
+        <div class="link-card status-alert">
+          <i class="ph-fill ph-warning-circle"></i>
+          <div>
+            <span>LINK BACKUP (RÁDIO)</span>
+            <strong>INSTÁVEL - 45ms</strong>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    
+    <div id="section-overview" class="dashboard-section active">
+      <div class="grid-container">
+        <div class="panel overview-panel col-span-3">
+          <div class="stat-card">
+            <div class="stat-icon"><i class="ph ph-users"></i></div>
+            <div class="stat-info">
+              <h3>Clientes Online / Total</h3>
+              <div class="stat-numbers"><span class="highlight" id="val-online">4.892</span> <small id="val-total-clients">/ 5.100</small></div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon error"><i class="ph ph-user-minus"></i></div>
+            <div class="stat-info">
+              <h3>Clientes Offline</h3>
+              <div class="stat-numbers"><span class="error-text" id="val-offline">208</span></div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon"><i class="ph ph-router"></i></div>
+            <div class="stat-info">
+              <h3>Equipamentos Ativos</h3>
+              <div class="stat-numbers"><span id="val-equip">342</span></div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon warning"><i class="ph ph-warning"></i></div>
+            <div class="stat-info">
+              <h3>Alertas / Falhas</h3>
+              <div class="stat-numbers"><span class="warning-text">3</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Tráfego da Rede e Uso de Banda -->
+        <div class="panel col-span-2 row-span-2">
+          <div class="panel-header">
+            <h2>Tráfego da Rede (Tempo Real)</h2>
+            <div class="panel-badge">10Gbps Core</div>
+          </div>
+          <div class="chart-container">
+            <canvas id="trafficChart"></canvas>
+          </div>
+          <div class="traffic-stats">
+            <div class="t-stat">
+              <i class="ph-bold ph-arrow-down" style="color:var(--neon)"></i>
+              <span>Total Download</span>
+              <strong id="val-down">4.2 Gbps</strong>
+            </div>
+            <div class="t-stat">
+              <i class="ph-bold ph-arrow-up" style="color:var(--purple)"></i>
+              <span>Total Upload</span>
+              <strong id="val-up">1.8 Gbps</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Alertas do Sistema -->
+        <div class="panel alert-panel">
+          <div class="panel-header">
+            <h2>Alertas Recentes</h2>
+            <span class="badge-danger">3 Não resolvidos</span>
+          </div>
+          <ul class="alert-list" id="alert-feed">
+            <li class="alert-item error">
+              <i class="ph-fill ph-warning-circle"></i>
+              <div class="alert-text">
+                <strong>Torre Mangabeira OFFLINE</strong>
+                <span>Queda de energia detectada. 14 min atrás</span>
+              </div>
+            </li>
+            <li class="alert-item warning">
+              <i class="ph-fill ph-warning"></i>
+              <div class="alert-text">
+                <strong>Uso alto de banda - Link B</strong>
+                <span>Atingiu 90% da capacidade. 2 min atrás</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 8. Histórico (Tráfego Diário/Quedas) -->
+        <div class="panel">
+          <div class="panel-header">
+            <h2>Histórico (Últimas 24h)</h2>
+          </div>
+          <div class="chart-container-small">
+            <canvas id="historyChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+  </main>
+
+  <script src="js/noc.js"></script>
+</body>
+</html>

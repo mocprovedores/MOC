@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MOC Provedores | Internet • Telecom • Tecnologia</title>
+  <meta name="description" content="MOC Provedores LTDA – Internet banda larga de alta velocidade, telefonia VOIP, TV por assinatura e soluções em tecnologia em João Pessoa – PB." />
+  <meta name="keywords" content="internet banda larga, João Pessoa, provedor de internet, MOC Provedores, fibra óptica, VOIP, tecnologia" />
+  <meta name="author" content="MOC Provedores LTDA" />
+  <link rel="canonical" href="https://mocprovedores.com.br/" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="MOC Provedores | Internet • Telecom • Tecnologia" />
+  <meta property="og:description" content="Internet de alta velocidade para sua casa e empresa em João Pessoa – PB." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mocprovedores.com.br/" />
+  <!-- Favicon -->
+  <link rel="icon" href="img/logo.svg" type="image/png" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <!-- Icons: Phosphor -->
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ╔════════════════════════════╗ -->
+  <!-- ║        NAVIGATION          ║ -->
+  <!-- ╚════════════════════════════╝ -->
+  <header id="navbar" class="navbar">
+    <div class="container navbar__inner">
+      <a href="#hero" class="navbar__logo" aria-label="MOC Provedores">
+        <img src="img/logo.svg" alt="MOC Provedores" class="logo-img" />
+      </a>
+      <nav class="navbar__links" aria-label="Navegação principal">
+        <a href="#sobre">Sobre</a>
+        <a href="#planos">Planos</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#diferenciais">Diferenciais</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <div class="navbar__actions">
+        <a href="area_cliente.html" class="btn btn--outline btn--sm"><i class="ph-bold ph-user"></i> Área do Cliente</a>
+        <a href="https://wa.me/5583981638677?text=Olá!%20Gostaria%20de%20contratar%20internet." class="btn btn--neon navbar__cta" target="_blank" rel="noopener">Fale Conosco</a>
+      </div>
+      <button class="navbar__hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="navbar__mobile" id="mobileMenu">
+      <a href="#sobre" class="mobile-link">Sobre</a>
+      <a href="#planos" class="mobile-link">Planos</a>
+      <a href="#servicos" class="mobile-link">Serviços</a>
+      <a href="#diferenciais" class="mobile-link">Diferenciais</a>
+      <a href="#contato" class="mobile-link">Contato</a>
+      <a href="area_cliente.html" class="btn btn--outline" style="justify-content:center"><i class="ph-bold ph-user"></i> Área do Cliente</a>
+      <a href="https://wa.me/5583981638677" class="btn btn--neon" target="_blank" rel="noopener" style="justify-content:center">WhatsApp</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ╔════════════════════════════╗ -->
+    <!-- ║          HERO              ║ -->
+    <!-- ╚════════════════════════════╝ -->
+    <section id="hero" class="hero">
+      <canvas id="networkCanvas" aria-hidden="true"></canvas>
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="container hero__content reveal">
+        <span class="hero__badge">⚡ João Pessoa · PB</span>
+        <h1 class="hero__title">Internet de <span class="gradient-text">Alta Velocidade</span><br/>para sua Casa e Empresa</h1>
+        <p class="hero__subtitle">Tecnologia, estabilidade e velocidade para manter você sempre conectado. Mais de 10 anos de experiência em telecomunicações.</p>
+        <div class="hero__actions">
+          <a href="#planos" class="btn btn--neon btn--lg">Ver Planos <i class="ph-bold ph-arrow-right"></i></a>
+          <a href="https://wa.me/5583981638677?text=Olá!%20Quero%20contratar%20internet." class="btn btn--outline btn--lg" target="_blank" rel="noopener"><i class="ph-bold ph-whatsapp-logo"></i> WhatsApp</a>
+        </div>
+        <div class="hero__stats">
+          <div class="stat"><span class="stat__num">10+</span><span class="stat__lbl">Anos de Mercado</span></div>
+          <div class="stat__divider"></div>
+          <div class="stat"><span class="stat__num">1Gbps</span><span class="stat__lbl">Velocidade Máxima</span></div>
+          <div class="stat__divider"></div>
+          <div class="stat"><span class="stat__num">99.9%</span><span class="stat__lbl">Uptime Garantido</span></div>
+        </div>
+      </div>
+      <div class="hero__scroll-hint" aria-hidden="true"><span></span></div>
+    </section>
+
+    <!-- ╔════════════════════════════╗ -->
+    <!-- ║           SOBRE            ║ -->
+    <!-- ╚════════════════════════════╝ -->
+    <section id="sobre" class="section sobre">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-label">Sobre Nós</span>
+          <h2 class="section-title">Conectando pessoas desde <span class="gradient-text">2013</span></h2>
+          <p class="section-desc">A M.O.C Provedores LTDA nasceu com a missão de levar tecnologia de qualidade para residências e empresas de João Pessoa e região. Com mais de uma década de experiência em infraestrutura de redes e telecomunicações, somos referência em conectividade no estado da Paraíba.</p>
+        </div>
+        <div class="sobre__mvv reveal">
+          <div class="mvv-card">
+            <div class="mvv-card__icon"><i class="ph-bold ph-target"></i></div>
+            <h3>Missão</h3>
+            <p>Oferecer soluções de conectividade e tecnologia com excelência, proporcionando comunicação acessível e de alta qualidade para todos os nossos clientes.</p>
+          </div>
+          <div class="mvv-card">
+            <div class="mvv-card__icon"><i class="ph-bold ph-eye"></i></div>
+            <h3>Visão</h3>
+            <p>Ser o provedor de internet mais confiável e inovador da Paraíba, expandindo nossa infraestrutura e serviços para atender cada vez mais clientes.</p>
+          </div>
+          <div class="mvv-card">
+            <div class="mvv-card__icon"><i class="ph-bold ph-star"></i></div>
+            <h3>Valores</h3>
+            <p>Qualidade, transparência, inovação e compromisso com o cliente. Acreditamos que a tecnologia deve ser acessível e confiável para todos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ╔════════════════════════════╗ -->
+    <!-- ║          PLANOS            ║ -->
+    <!-- ╚════════════════════════════╝ -->
+    <section id="planos" class="section planos">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-label">Planos de Internet</span>
+          <h2 class="section-title">Escolha o plano <span class="gradient-text">ideal para você</span></h2>
+          <p class="section-desc">Planos com velocidade real e suporte especializado. Sem letras miúdas.</p>
+        </div>
+        <div class="plans__grid reveal">
+
+          <!-- Plan Start -->
+          <div class="plan-card">
+            <div class="plan-card__tag">Popular</div>
+            <div class="plan-card__header">
+              <span class="plan-card__name">Start</span>
+              <div class="plan-card__speed"><span class="speed-num">300</span><span class="speed-unit">Mega</span></div>
+            </div>
+            <ul class="plan-card__features">
+              <li><i class="ph-bold ph-check-circle"></i> Wi-Fi incluso</li>
+              <li><i class="ph-bold ph-check-circle"></i> Suporte técnico 24h</li>
+              <li><i class="ph-bold ph-check-circle"></i> Instalação gratuita</li>
+              <li><i class="ph-bold ph-check-circle"></i> Sem fidelidade</li>
+            </ul>
+            <div class="plan-card__price">
+              <span class="price-from">a partir de</span>
+              <span class="price-value">R$ 89<sup>,90</sup></span>
+              <span class="price-period">/mês</span>
+            </div>
+            <div class="plan-card__actions">
+              <a href="#contato" class="btn btn--outline w-full">Assinar Agora</a>
+              <a href="https://wa.me/5583981638677?text=Quero%20o%20Plano%20Start%20300Mega!" class="btn btn--ghost w-full" target="_blank" rel="noopener"><i class="ph-bold ph-whatsapp-logo"></i> Via WhatsApp</a>
+            </div>
+          </div>
+
+          <!-- Plan Turbo -->
+          <div class="plan-card plan-card--featured">
+            <div class="plan-card__tag plan-card__tag--best">Mais Vendido</div>
+            <div class="plan-card__header">
+              <span class="plan-card__name">Turbo</span>
+              <div class="plan-card__speed"><span class="speed-num">600</span><span class="speed-unit">Mega</span></div>
+            </div>
+            <ul class="plan-card__features">
+              <li><i class="ph-bold ph-check-circle"></i> Wi-Fi avançado dual-band</li>
+              <li><i class="ph-bold ph-check-circle"></i> Suporte prioritário</li>
+              <li><i class="ph-bold ph-check-circle"></i> Instalação gratuita</li>
+              <li><i class="ph-bold ph-check-circle"></i> IP fixo opcional</li>
+              <li><i class="ph-bold ph-check-circle"></i> Sem fidelidade</li>
+            </ul>
+            <div class="plan-card__price">
+              <span class="price-from">a partir de</span>
+              <span class="price-value">R$ 129<sup>,90</sup></span>
+              <span class="price-period">/mês</span>
+            </div>
+            <div class="plan-card__actions">
+              <a href="#contato" class="btn btn--neon w-full">Assinar Agora</a>
+              <a href="https://wa.me/5583981638677?text=Quero%20o%20Plano%20Turbo%20600Mega!" class="btn btn--ghost w-full" target="_blank" rel="noopener"><i class="ph-bold ph-whatsapp-logo"></i> Via WhatsApp</a>
+            </div>
+          </div>
+
+          <!-- Plan Ultra -->
+          <div class="plan-card">
+            <div class="plan-card__tag plan-card__tag--ultra">Ultra Premium</div>
+            <div class="plan-card__header">
+              <span class="plan-card__name">Ultra</span>
+              <div class="plan-card__speed"><span class="speed-num">1</span><span class="speed-unit">Giga</span></div>
+            </div>
+            <ul class="plan-card__features">
+              <li><i class="ph-bold ph-check-circle"></i> Wi-Fi 6 premium</li>
+              <li><i class="ph-bold ph-check-circle"></i> Suporte VIP dedicado</li>
+              <li><i class="ph-bold ph-check-circle"></i> Instalação gratuita</li>
+              <li><i class="ph-bold ph-check-circle"></i> IP fixo incluso</li>
+              <li><i class="ph-bold ph-check-circle"></i> SLA garantido</li>
+            </ul>
+            <div class="plan-card__price">
+              <span class="price-from">a partir de</span>
+              <span class="price-value">R$ 199<sup>,90</sup></span>
+              <span class="price-period">/mês</span>
+            </div>
+            <div class="plan-card__actions">
+              <a href="#contato" class="btn btn--outline w-full">Assinar Agora</a>
+              <a href="https://wa.me/5583981638677?text=Quero%20o%20Plano%20Ultra%201Giga!" class="btn btn--ghost w-full" target="_blank" rel="noopener"><i class="ph-bold ph-whatsapp-logo"></i> Via WhatsApp</a>
+            </div>
+          </div>
+
+        </div>
+        <p class="plans__disclaimer reveal">* Consulte disponibilidade em sua região. Preços sujeitos a alteração sem aviso prévio.</p>
+      </div>
+    </section>
+
+    <!-- ╔════════════════════════════╗ -->
+    <!-- ║         SERVIÇOS           ║ -->
+    <!-- ╚════════════════════════════╝ -->
+    <section id="servicos" class="section servicos">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-label">Serviços</span>
+          <h2 class="section-title">Soluções completas em <span class="gradient-text">Tecnologia</span></h2>
+          <p class="section-desc">Da conectividade ao desenvolvimento de software, somos seu parceiro tecnológico completo.</p>
+        </div>
+        <div class="services__grid reveal">
+          <div class="service-card"><div class="service-card__icon"><i class="ph-bold ph-wifi-high"></i></div><h3>Internet Banda Larga</h3><p>Conexão de alta velocidade com fibra óptica para residências e empresas.</p></div>
+          <div class="service-card"><div class="service-card__icon"><i class="ph-bold ph-phone-call"></i></div><h3>Telefonia VOIP</h3><p>Comunicação empresarial com ramais ilimitados e qualidade cristalina.</p></div>
+          <div class="service-card"><div class="service-card__icon"><i class="ph-bold ph-television"></i></div><h3>TV por Assinatura</h3><p>Canais premium e conteúdo multimídia de alta definição via cabo.</p></div>
+          <div class="service-card"><div class="service-card__icon"><i class="ph-bold ph-git-network"></i></div><h3>Manutenção de Redes</h3><p>Instalação, configuração e manutenção de infraestrutura de telecomunicações.</p></div>
+          <div class="service-card"><div class="service-card__icon"><i class="ph-bold ph-code"></i></div><h3>Desenvolvimento de Software</h3><p>Sistemas, portais e aplicações web sob medida para o seu negócio.</p></div>
+          <div class="service-card"><div class="service-card__icon"><i class="ph-bold ph-globe"></i></div><h3>Hospedagem de Sites</h3><p>Hospedagem segura e escalável com alta disponibilidade e suporte técnico.</p></div>
+          <div class="service-card"><div class="service-card__icon"><i class="ph-bold ph-cloud"></i></div><h3>Serviços de Nuvem</h3><p>Soluções cloud para armazenamento, backup e processamento de dados.</p></div>
+          <div class="service-card"><div class="service-card__icon"><i class="ph-bold ph-headset"></i></div><h3>Suporte Técnico em TI</h3><p>Equipe especializada para atender sua empresa com agilidade e eficiência.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ╔════════════════════════════╗ -->
+    <!-- ║       DIFERENCIAIS         ║ -->
+    <!-- ╚════════════════════════════╝ -->
+    <section id="diferenciais" class="section diferenciais">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-label">Por que escolher a MOC?</span>
+          <h2 class="section-title">Diferenciais que fazem <span class="gradient-text">a diferença</span></h2>
+        </div>
+        <div class="diff__grid reveal">
+          <div class="diff-item">
+            <div class="diff-item__icon"><i class="ph-bold ph-rocket-launch"></i></div>
+            <h3>Alta Velocidade</h3>
+            <p>Fibra óptica pura até sua porta, com velocidades reais de até 1 Gbps sem oscilações.</p>
+          </div>
+          <div class="diff-item">
+            <div class="diff-item__icon"><i class="ph-bold ph-shield-check"></i></div>
+            <h3>Rede Estável</h3>
+            <p>Infraestrutura redundante e monitoramento 24/7 garantindo 99.9% de uptime.</p>
+          </div>
+          <div class="diff-item">
+            <div class="diff-item__icon"><i class="ph-bold ph-clock-countdown"></i></div>
+            <h3>Atendimento Rápido</h3>
+            <p>Suporte técnico ágil com tempo de resposta garantido contratualmente.</p>
+          </div>
+          <div class="diff-item">
+            <div class="diff-item__icon"><i class="ph-bold ph-cpu"></i></div>
+            <h3>Tecnologia Moderna</h3>
+            <p>Equipamentos de última geração e protocolos modernos para máxima performance.</p>
+          </div>
+          <div class="diff-item">
+            <div class="diff-item__icon"><i class="ph-bold ph-users-three"></i></div>
+            <h3>Suporte Especializado</h3>
+            <p>Técnicos certificados prontos para resolver qualquer problema remotamente ou presencialmente.</p>
+          </div>
+          <div class="diff-item">
+            <div class="diff-item__icon"><i class="ph-bold ph-handshake"></i></div>
+            <h3>Sem Burocracia</h3>
+            <p>Contratação simples, sem fidelidade forçada e com total transparência em todos os contratos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ╔════════════════════════════╗ -->
+    <!-- ║        COBERTURA           ║ -->
+    <!-- ╚════════════════════════════╝ -->
+    <section id="cobertura" class="section cobertura">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-label">Cobertura</span>
+          <h2 class="section-title">Atendemos <span class="gradient-text">João Pessoa e Região</span></h2>
+          <p class="section-desc">Nossa rede de fibra óptica cobre João Pessoa, a região metropolitana e o interior da Paraíba.</p>
+        </div>
+        <div class="cobertura__inner reveal">
+          <div class="cobertura__info">
+            <div class="coverage-item"><i class="ph-bold ph-map-pin"></i><div><strong>João Pessoa – PB</strong><p>Cobertura na capital com rede de alta densidade.</p></div></div>
+            <div class="coverage-item"><i class="ph-bold ph-map-trifold"></i><div><strong>Região Metropolitana</strong><p>Cobertura em municípios vizinhos interligados por backbone próprio.</p></div></div>
+            <div class="coverage-item"><i class="ph-bold ph-globe-hemisphere-west"></i><div><strong>Interior da Paraíba</strong><p>Expansão contínua para novos municípios do estado.</p></div></div>
+            <a href="https://wa.me/5583981638677?text=Quero%20verificar%20se%20tem%20cobertura%20na%20minha%20rua!" class="btn btn--neon" target="_blank" rel="noopener">Verificar disponibilidade <i class="ph-bold ph-arrow-right"></i></a>
+          </div>
+          <div class="cobertura__map">
+            <iframe title="Localização MOC Provedores em João Pessoa" src="https://maps.google.com/maps?q=Rua+Deputado+Tertuliano+de+Brito,+18,+Jo%C3%A3o+Pessoa,+PB&output=embed" width="100%" height="380" style="border:0;border-radius:16px;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ╔════════════════════════════╗ -->
+    <!-- ║       DEPOIMENTOS          ║ -->
+    <!-- ╚════════════════════════════╝ -->
+    <section id="depoimentos" class="section depoimentos">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-label">Depoimentos</span>
+          <h2 class="section-title">O que nossos clientes <span class="gradient-text">dizem</span></h2>
+        </div>
+        <div class="testimonials__grid reveal">
+          <div class="testimonial-card">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p>"Contratei o plano Turbo e fiquei impressionado com a velocidade real. Trabalho em home office e nunca tive problemas. O suporte é excelente e resolve tudo rapidamente!"</p>
+            <div class="testimonial-card__author"><div class="testimonial-card__avatar">CM</div><div><strong>Carlos Mendes</strong><span>Cliente desde 2019</span></div></div>
+          </div>
+          <div class="testimonial-card testimonial-card--featured">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p>"A MOC transformou a internet da minha empresa. Velocidade consistente, sem quedas e o atendimento é diferenciado. Recomendo a todos os empresários de João Pessoa!"</p>
+            <div class="testimonial-card__author"><div class="testimonial-card__avatar">AS</div><div><strong>Ana Santos</strong><span>Empresária · Cliente desde 2020</span></div></div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p>"Instalação rápida, equipe muito profissional. Assino o plano Ultra e tenho 1 Giga de verdade. Melhor investimento que fiz para minha casa!"</p>
+            <div class="testimonial-card__author"><div class="testimonial-card__avatar">PR</div><div><strong>Paulo Rocha</strong><span>Cliente desde 2021</span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ╔════════════════════════════╗ -->
+    <!-- ║      CALL TO ACTION        ║ -->
+    <!-- ╚════════════════════════════╝ -->
+    <section id="cta" class="section cta">
+      <div class="cta__bg" aria-hidden="true"></div>
+      <div class="container cta__inner reveal">
+        <h2 class="cta__title">Conecte sua casa ou empresa <span class="gradient-text">hoje mesmo</span></h2>
+        <p class="cta__desc">Sem complicação. Instalação rápida, planos flexíveis e suporte especializado do início ao fim.</p>
+        <div class="cta__actions">
+          <a href="#planos" class="btn btn--neon btn--lg">Contratar Internet <i class="ph-bold ph-arrow-right"></i></a>
+          <a href="https://wa.me/5583981638677?text=Olá!%20Quero%20falar%20com%20um%20especialista." class="btn btn--outline btn--lg" target="_blank" rel="noopener"><i class="ph-bold ph-chat-circle-dots"></i> Falar com Especialista</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ╔════════════════════════════╗ -->
+    <!-- ║         CONTATO            ║ -->
+    <!-- ╚════════════════════════════╝ -->
+    <section id="contato" class="section contato">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-label">Contato</span>
+          <h2 class="section-title">Fale com a <span class="gradient-text">nossa equipe</span></h2>
+          <p class="section-desc">Estamos prontos para atender você. Escolha a melhor forma de entrar em contato.</p>
+        </div>
+        <div class="contato__inner reveal">
+          <div class="contato__info">
+            <div class="contact-item">
+              <div class="contact-item__icon"><i class="ph-bold ph-whatsapp-logo"></i></div>
+              <div><strong>WhatsApp</strong><a href="https://wa.me/5583981638677" target="_blank" rel="noopener">(83) 98163-8677</a></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item__icon"><i class="ph-bold ph-phone"></i></div>
+              <div><strong>Telefone</strong><a href="tel:+5583981638677">(83) 98163-8677</a></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item__icon"><i class="ph-bold ph-map-pin"></i></div>
+              <div><strong>Endereço</strong><span>Rua Dep. Tertuliano de Brito, 18 Letra B<br/>Treze de Maio · João Pessoa – PB<br/>CEP 58025-000</span></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item__icon"><i class="ph-bold ph-clock"></i></div>
+              <div><strong>Horário</strong><span>Seg–Sex: 08h às 18h<br/>Sáb: 08h às 13h</span></div>
+            </div>
+          </div>
+          <form class="contato__form" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="nome">Nome completo</label>
+              <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
+            </div>
+            <div class="form-group">
+              <label for="telefone">Telefone / WhatsApp</label>
+              <input type="tel" id="telefone" name="telefone" placeholder="(83) 99999-9999" required />
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="seu@email.com" />
+            </div>
+            <div class="form-group">
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" rows="4" placeholder="Como podemos ajudar?"></textarea>
+            </div>
+            <button type="submit" class="btn btn--neon w-full" id="formSubmit">Enviar Mensagem <i class="ph-bold ph-paper-plane-tilt"></i></button>
+            <p class="form-feedback" id="formFeedback" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ╔════════════════════════════╗ -->
+  <!-- ║          FOOTER            ║ -->
+  <!-- ╚════════════════════════════╝ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#hero" class="navbar__logo" aria-label="MOC Provedores">
+          <img src="img/logo.png" alt="MOC Provedores" class="logo-img" />
+        </a>
+        <p>Internet • Telecom • Tecnologia<br/>Conectando o futuro desde 2013.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Facebook"><i class="ph-bold ph-facebook-logo"></i></a>
+          <a href="#" aria-label="Instagram"><i class="ph-bold ph-instagram-logo"></i></a>
+          <a href="https://wa.me/5583981638677" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="ph-bold ph-whatsapp-logo"></i></a>
+        </div>
+      </div>
+      <div class="footer__links">
+        <h4>Links Rápidos</h4>
+        <a href="#sobre">Sobre</a>
+        <a href="#planos">Planos</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#diferenciais">Diferenciais</a>
+        <a href="#contato">Contato</a>
+      </div>
+      <div class="footer__links">
+        <h4>Serviços</h4>
+        <a href="#servicos">Internet Banda Larga</a>
+        <a href="#servicos">Telefonia VOIP</a>
+        <a href="#servicos">TV por Assinatura</a>
+        <a href="#servicos">Hospedagem</a>
+        <a href="#servicos">Suporte TI</a>
+      </div>
+      <div class="footer__contact">
+        <h4>Contato</h4>
+        <p><i class="ph-bold ph-map-pin"></i> Rua Dep. Tertuliano de Brito, 18 Letra B<br/>João Pessoa – PB · CEP 58025-000</p>
+        <p><i class="ph-bold ph-whatsapp-logo"></i> <a href="https://wa.me/5583981638677">(83) 98163-8677</a></p>
+        <p><i class="ph-bold ph-identification-card"></i> CNPJ: 17.783.859/0001-17</p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <span>© 2025 M.O.C Provedores LTDA · CNPJ: 17.783.859/0001-17. Todos os direitos reservados.</span>
+        <span>Fundada em 18/03/2013 · João Pessoa – PB</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/5583981638677?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20os%20planos." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <i class="ph-bold ph-whatsapp-logo"></i>
+    <span class="whatsapp-float__tooltip">Fale conosco!</span>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
