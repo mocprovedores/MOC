@@ -158,7 +158,7 @@
           <a href="#">Esqueci minha senha</a>
         </div>
 
-        <button type="button" class="btn btn--neon login-btn" onclick="alert('Funcionalidade em desenvolvimento. Redirecionando para WhatsApp...'); window.open('https://wa.me/5583981638677?text=Olá,%20preciso%20de%20ajuda%20com%20minha%20Área%20do%20Cliente!', '_blank');">
+        <button type="submit" class="btn btn--neon login-btn">
           Entrar <i class="ph-bold ph-sign-in"></i>
         </button>
       </form>
@@ -170,5 +170,20 @@
   </section>
 
   <script src="js/main.js"></script>
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const cpfCnpj = document.getElementById('cpf_cnpj').value.trim();
+      const senha = document.getElementById('senha').value;
+
+      // Credenciais específicas solicitadas pelo usuário
+      if (cpfCnpj === '17783859000117' && senha === 'M0c#91!8') {
+        window.location.href = 'noc.html';
+      } else {
+        alert('Credenciais incorretas. Por favor, tente novamente.');
+      }
+    });
+  </script>
 </body>
 </html>
